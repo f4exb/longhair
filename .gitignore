@@ -22,3 +22,6 @@ proj/Debug/*
 # Eclipse
 .project
 .cproject
+
+# cmake
+build/
