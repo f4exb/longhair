@@ -18,3 +18,7 @@ proj/*.suo
 proj/*.opensdf
 proj/x64/*
 proj/Debug/*
+
+# Eclipse
+.project
+.cproject
