@@ -84,17 +84,18 @@ target_include_directories(longhair PUBLIC
   ${PROJECT_SOURCE_DIR}/libcat
 ) 
 
-#add_executable(cm256_test
-#  unit_test/maingcc.cpp
-#)
+add_executable(longhair_test
+  tests/main.cpp
+)
 
-#target_include_directories(cm256_test PUBLIC
-#    ${PROJECT_SOURCE_DIR}
-#    ${CMAKE_CURRENT_BINARY_DIR}
-#)
+target_include_directories(longhair_test PUBLIC
+  ${PROJECT_SOURCE_DIR}/include
+  ${PROJECT_SOURCE_DIR}/libcat
+  ${CMAKE_CURRENT_BINARY_DIR}
+)
 
-#target_link_libraries(cm256_test cm256)
+target_link_libraries(longhair_test longhair)
 
-#install(TARGETS cm256_test DESTINATION bin)
+install(TARGETS longhair_test DESTINATION bin)
 install(TARGETS longhair DESTINATION lib)
 install(FILES ${longhair_HEADERS} DESTINATION include/${PROJECT_NAME})
